@@ -26,6 +26,10 @@ jobs:
       run: npm run build
     - name: ls publish dir
       run:  ls $PUBLISH_DIR
+    - name: cd publish dir
+      run:  cd $PUBLISH_DIR
+    - name: pwd current
+      run:  pwd
     - name: Check file existence
       run: cat $PUBLISH_DIR/CNAME
     - name: test after step stop
