@@ -30,3 +30,4 @@ jobs:
       uses: andstor/file-existence-action@v1
       with:
         files: CNAME
+        allow_failure: true
