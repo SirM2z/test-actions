@@ -1,0 +1,8 @@
+{
+  "name": "@pipcook/pipboard",
+  "version": "3.0.0",
+  "description": "board for pipcook",
+  "scripts": {
+    "build": "node src/index.js"
+  }
+}
