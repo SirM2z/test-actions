@@ -34,15 +34,7 @@ jobs:
       with:
         files: CNAME
         allow_failure: true
-    - name: Commit files
+    - name: test after step stop
       run: |
         git init
-        git config --local user.name $USER_NAME
-        git config --local user.email $USER_EMAIL
-        git status
-        git remote add origin https://$MY_SECRET@github.com/SirM2z/test-actions.git
-        git checkout -b gh-pages
-        git add --all
-        git commit -m "deploy to Github pages"
-        git push origin gh-pages -f
-        echo 🤘 deploy gh-pages complete.
+        echo 🤘 prefect.
