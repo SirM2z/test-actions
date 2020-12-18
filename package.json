@@ -1,7 +1,7 @@
 {
-  "name": "@pipcook/pipboard",
-  "version": "3.0.0",
-  "description": "board for pipcook",
+  "name": "test-actions",
+  "version": "1.0.0",
+  "description": "test actions",
   "scripts": {
     "build": "node src/index.js"
   }
