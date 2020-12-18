@@ -32,6 +32,6 @@ jobs:
 #         files: "$PUBLISH_DIR/CNAME"
 #         allow_failure: true
     - name: Check file existence
-      run: cat dist/CNAME
+      run: cat $PUBLISH_DIR/CNAME
     - name: test after step stop
       run: echo 🤘 prefect.
