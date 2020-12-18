@@ -24,16 +24,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm run build
       run: npm run build
-    - name: cd & ls publish dir
-      run:  |
-        cd $PUBLISH_DIR
-        ls
+    - name: ls publish dir
+      run:  ls $PUBLISH_DIR
     - name: Check file existence
       uses: andstor/file-existence-action@v1
       with:
-        files: "dist/CNAME"
+        files: "$PUBLISH_DIR/CNAME"
         allow_failure: true
     - name: test after step stop
-      run: |
-        git init
-        echo 🤘 prefect.
+      run: echo 🤘 prefect.
