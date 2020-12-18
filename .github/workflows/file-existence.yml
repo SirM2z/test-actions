@@ -26,10 +26,12 @@ jobs:
       run: npm run build
     - name: ls publish dir
       run:  ls $PUBLISH_DIR
+#     - name: Check file existence
+#       uses: andstor/file-existence-action@v1
+#       with:
+#         files: "$PUBLISH_DIR/CNAME"
+#         allow_failure: true
     - name: Check file existence
-      uses: andstor/file-existence-action@v1
-      with:
-        files: "$PUBLISH_DIR/CNAME"
-        allow_failure: true
+      run: cat dist/CNAME
     - name: test after step stop
       run: echo 🤘 prefect.
